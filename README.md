@@ -8,6 +8,17 @@ Web application buuilt in Flask micro framework. Allows users to store a list of
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://durand90.github.io/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fanfan-durand/)
 
+## 🛠 Skills
+Python, HTML, CSS, Flask, Session, Balsamiq, Trello, MySQL Server
+
+
+## Tech Stack
+
+**Client:** Python, Sessons
+
+**Server:** MySQL, Bcrypt
+
+
 
 ## Login Page
 
@@ -22,17 +33,6 @@ Web application buuilt in Flask micro framework. Allows users to store a list of
 
 ![App Screenshot](flask_app/static/css/add-recipe.png)
 
-
-
-## 🛠 Skills
-Python, HTML, CSS, Flask, Session, Balsamiq, Trello, MySQL Server
-
-
-## Tech Stack
-
-**Client:** Python, Sessons
-
-**Server:** MySQL, Bcrypt
 
 
 ## Running Tests
