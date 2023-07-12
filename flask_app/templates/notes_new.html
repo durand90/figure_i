@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/new.css') }}">
+</head>
+
+<body class="container">
+        <form action="/notes/create" method='post'>
+            <div class="form">
+                <h1>Create new Recipe</h1>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    {% for message in get_flashed_messages(category_filter=['err_notes_name']) %}
+                    <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+                
+                <div class="inner-container">
+                    <div>
+                        <label for="description">Description</label><br>
+                        <textarea name="description" id="description" cols="30" rows="15"></textarea>
+                        {% for message in get_flashed_messages(category_filter=['err_notes_description']) %}
+                        <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <label for="instructions">Instructions</label><br>
+                        <textarea name="instructions" id="instructions" cols="30" rows="15"></textarea>
+                        {% for message in get_flashed_messages(category_filter=['err_notes_instructions']) %}
+                        <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <button class="button">Create Recipe</button>
+            </div>
+        </form>
+</body>
+</html>
+
+

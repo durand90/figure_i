@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/success.css') }}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body class="container">
+    <div>
+        <div>
+
+
+            <h1 style="text-align: center;">Welcome to Your Recipes {{ user.fullname }}</h1>
+
+            <h4 style="text-align: center;">Treasures for Future Generations</h4>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Under 30 Minutes</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for note in all_notes %}
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{ note.name }}</td>
+                        <td>{{ note.under_30_minutes }}</td>
+                        <td>
+                            <a href="/notes/{{note.id}}/view">view instructions</a>
+                            <a href="/notes/{{note.id}}/edit">edit</a>
+                            <a href="/notes/{{note.id}}/delete">delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div>
+                <a href="notes/new">Create New Recipe</a>
+            </div>
+            <a href="/recipes/logout">Logout</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

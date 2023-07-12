@@ -1,0 +1,26 @@
+
+
+.container {
+    background-image: url("44086.jpg");
+    background-color: green;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.family {
+    text-align: center;
+    color: brown;
+    box-shadow: 9px 9px 9px grey;
+}
+
+.inner-container {
+    background-color: yellow;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}

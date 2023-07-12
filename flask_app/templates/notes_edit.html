@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="container">
+    <div class="container">
+        <h1>Update Note</h1>
+        <form action="/notes/{{note.id}}/update" method='post'>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                {% for message in get_flashed_messages(category_filter=['err_notes_name']) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                {% for message in get_flashed_messages(category_filter=['err_notes_description']) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            <div>
+                <label for="instructions">Instructions</label>
+                <textarea name="instructions" id="instructions" cols="30" rows="10"></textarea>
+                {% for message in get_flashed_messages(category_filter=['err_notes_instructions']) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            <button type="button">Update Recipe</button>
+        </form>
+    </div>
+</body>
+</html>
+

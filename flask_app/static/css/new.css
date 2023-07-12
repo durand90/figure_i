@@ -1,0 +1,44 @@
+
+
+
+.container {
+    background-image: url("6054023.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form {
+    text-align: center;
+    width: 80vh;
+    height: 60vh;
+}
+
+
+.inner-container {
+    width: 90vh;
+    height: 30vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
